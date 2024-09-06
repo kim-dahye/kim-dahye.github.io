@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers are accepted to WACV 2023
+Two papers are presented at WACV 2023
