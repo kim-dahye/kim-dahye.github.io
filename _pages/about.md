@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD student at <a href='https://www.bu.edu/'>Boston University</a>. 
+subtitle: PhD student at <a href='https://www.bu.edu/'> Boston University</a>. 
 
 profile:
   align: right
