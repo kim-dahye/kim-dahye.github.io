@@ -24,10 +24,8 @@ I am a first-year CS PhD student at [Boston University](https://www.bu.edu/cs/),
 My research interests broadly span computer vision and machine learning. I am particularly passionate about understanding black-box machine learning systems and developing robust, reliable models to address real-world challenges.
 
 💭 My current research interests include
-- <span style='background-color: #ffffdd'>**User-Interactive Multimodal**</span>
-
-# - <span>Image generation / Diffusion models</span>
-# - <span>Vision-language models</span>
-# - <span>Safety / Interpretability</span>
+- Image generation / Diffusion models
+- Vision-language models
+- Safety / Interpretability
 
 but not limited to!
