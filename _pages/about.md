@@ -22,3 +22,9 @@ Hi, thanks for stopping by! <script src="https://kit.fontawesome.com/451e6a344c.
 I am a first-year CS PhD student at [Boston University](https://www.bu.edu/cs/), where I am fortunate to be advised by [Prof. Deepti Ghadiyaram](https://deeptigp.github.io/). Prior to joining BU, I completed my Master’s degree at [Yonsei University](https://www.yonsei.ac.kr/en_sc/index.jsp) under the guidance of [Prof. Kwanghoon Sohn](https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en).
 
 My research interests broadly span computer vision and machine learning. I am particularly passionate about understanding black-box machine learning systems and developing robust, reliable models to address real-world challenges.
+
+My current research interests include
+* Image generation / Diffusion models
+* Vision-language models
+* Fairness
+but not limited to!
