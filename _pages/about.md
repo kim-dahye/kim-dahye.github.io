@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: dahye.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p> dahye [at] bu.edu </p>
