@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD student at Boston University. Contact\: dahye@bu.edu
+subtitle: 'PhD student at Boston University. Contact\: dahye@bu.edu'
 
 profile:
   align: right
