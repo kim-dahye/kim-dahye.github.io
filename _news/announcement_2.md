@@ -5,4 +5,7 @@ inline: true
 related_posts: false
 ---
 
-New preprint is out: check out [*Revelio*](https://revelio-diffusion.github.io/revelio/) ! 🔥
+New preprint is out: check out 
+<a href="https://revelio-diffusion.github.io/revelio/" style="color: cyan; font-style: italic; text-decoration: none;">
+    Revelio
+</a>! 🔥
