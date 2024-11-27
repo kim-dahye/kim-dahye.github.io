@@ -6,6 +6,6 @@ related_posts: false
 ---
 
 New preprint is out: check out 
-<a href="https://revelio-diffusion.github.io/revelio/" style="color: cyan; font-style: italic; text-decoration: none;">
+<a href="https://revelio-diffusion.github.io/revelio/" style="color: #2698ba; font-style: italic; text-decoration: none;">
     Revelio
 </a>! 🔥
