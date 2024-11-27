@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-New preprint is out: check out [*Revelio*](https://revelio-diffusion.github.io/revelio/)! :sparkles:
+New preprint is out: check out [*Revelio*](https://revelio-diffusion.github.io/revelio/) ! 🔥
