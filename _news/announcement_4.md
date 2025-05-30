@@ -7,4 +7,4 @@ related_posts: false
 🎉
 <a href="https://revelio-diffusion.github.io/revelio/" style="color: #2698ba; font-style: italic; text-decoration: none;">
     Revelio
-</a> has been selected for an **oral presentation** at the CVPR 2025 Mechanistic Interpretability for Vision (MIV) Workshop! 🇺🇸
+</a> has been selected for an oral presentation at the CVPR 2025 Mechanistic Interpretability for Vision (MIV) Workshop! 
