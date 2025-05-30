@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I've started PhD journey at Boston University! 🚀
+🚀 I've started PhD journey at Boston University! 
