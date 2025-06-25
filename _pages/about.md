@@ -26,6 +26,5 @@ My research interests broadly span computer vision and machine learning. I am pa
 💭 My current research interests include
 - Image generation / Diffusion models
 - Interpretability / Safety
-- Video Understanding
 
 but not limited to!
