@@ -1,0 +1,87 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <article>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <div id="travel-map" style="height: 500px; width: 100%; border-radius: 8px; margin-bottom: 2rem;"></div>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; overflow-y:auto;">
+      <div style="max-width: 900px; margin: 40px auto; padding: 20px; position: relative;">
+        <button onclick="closeModal()" style="position:fixed; top:20px; right:30px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">✕</button>
+        <h2 id="modal-city-name" style="color:white; margin-bottom:1rem;"></h2>
+        <div id="modal-photos" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:12px;"></div>
+      </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      var travelData = {{ site.data.travel | jsonify }};
+
+      var map = L.map('travel-map').setView([30, 120], 3);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      var pinIcon = L.divIcon({
+        className: '',
+        html: '<div style="width:14px; height:14px; background:#e74c3c; border-radius:50%; border:2px solid white; box-shadow:0 1px 4px rgba(0,0,0,0.4);"></div>',
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
+
+      travelData.forEach(function(country) {
+        country.cities.forEach(function(city) {
+          var marker = L.marker([city.lat, city.lng], { icon: pinIcon }).addTo(map);
+
+          // Preview popup (first photo)
+          var previewHtml = '';
+          if (city.photos && city.photos.length > 0) {
+            previewHtml = '<img src="' + city.photos[0] + '" style="width:100%; max-width:200px; border-radius:6px; margin-top:8px; display:block;">';
+          }
+
+          marker.bindPopup(
+            '<div style="text-align:center;">' +
+            '<strong>' + city.name + '</strong>, ' + country.country + '<br>' +
+            previewHtml +
+            '<br><a href="#" onclick="openModal(\'' + city.name + '\', ' + JSON.stringify(city.photos) + '); return false;" style="color:#e74c3c;">view all photos →</a>' +
+            '</div>',
+            { maxWidth: 220 }
+          );
+        });
+      });
+
+      function openModal(cityName, photos) {
+        document.getElementById('modal-city-name').textContent = cityName;
+        var container = document.getElementById('modal-photos');
+        container.innerHTML = '';
+        photos.forEach(function(src) {
+          var img = document.createElement('img');
+          img.src = src;
+          img.style.cssText = 'width:100%; border-radius:6px; object-fit:cover;';
+          container.appendChild(img);
+        });
+        document.getElementById('photo-modal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        document.getElementById('photo-modal').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('photo-modal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+      });
+    </script>
+  </article>
+</div>

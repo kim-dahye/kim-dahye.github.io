@@ -1,0 +1,25 @@
+- country: Japan
+  lat: 36.2048
+  lng: 137.2529
+  cities:
+    - name: Tokyo
+      lat: 35.6762
+      lng: 139.6503
+      photos:
+        - /assets/img/1.jpg
+        - /assets/img/2.jpg
+        - /assets/img/3.jpg
+    - name: Osaka
+      lat: 34.6937
+      lng: 135.5023
+      photos:
+        - /assets/img/4.jpg
+        - /assets/img/5.jpg
+        - /assets/img/6.jpg
+    - name: Kyoto
+      lat: 35.0116
+      lng: 135.7681
+      photos:
+        - /assets/img/7.jpg
+        - /assets/img/8.jpg
+        - /assets/img/9.jpg
