@@ -67,8 +67,7 @@ layout: default
     <!-- Misc -->
     {% if page.misc %}
       <h2>misc.</h2>
-      {% capture misc_content %}{% include_relative ../_pages/misc.md %}{% endcapture %}
-      {{ misc_content | markdownify }}
+      <p>{{ page.misc_content }}</p>
     {% endif %}
 
     <!-- Social -->
