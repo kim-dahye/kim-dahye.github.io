@@ -723,10 +723,11 @@ footer.sticky-bottom {
 
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: var(--global-text-color);
+          border-bottom: none;
 
           &:hover {
-            border-bottom-style: solid;
+            border-bottom: none;
             text-decoration: none;
           }
         }
