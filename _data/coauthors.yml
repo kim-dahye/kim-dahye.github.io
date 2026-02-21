@@ -1,34 +1,31 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"ghadiyaram":
+  - firstname: ["Deepti"]
+    url: https://deeptigp.github.io/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"gadde":
+  - firstname: ["Raghudeep"]
+    url: https://www.linkedin.com/in/raghudeep-gadde/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"thomas":
+  - firstname: ["Xavier"]
+    url: xavierohan.github.io
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"park":
+  - firstname: ["Jungin"]
+    url: https://park-jungin.github.io/
+  - firstname: ["Seongheon"]
+    url: https://seongheon-96.github.io/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"lee":
+  - firstname: ["Jiyoung"]
+    url: https://lee-jiyoung.github.io/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"sohn":
+  - firstname: ["Kwanghoon"]
+    url: https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"kim":
+  - firstname: ["Hanjae"]
+    url: https://scholar.google.com/citations?user=27OrLa4AAAAJ&hl=en
+  - firstname: ["Minsu"]
+    url: https://scholar.google.com/citations?user=nBSnn5gAAAAJ&hl=en

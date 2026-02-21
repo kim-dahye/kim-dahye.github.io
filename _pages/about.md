@@ -24,7 +24,10 @@ I am a second-year CS PhD student at Boston University, where I am fortunate to 
 <!-- My research interests broadly span computer vision and machine learning. I am particularly passionate about understanding black-box machine learning systems and developing robust, reliable models to address real-world challenges. -->
 
 💭 My current research interests include
-- Image generation / Diffusion models
+- Image and video synthesis
+- Multimodal models
 - Interpretability / Safety
 
-but not limited to!
+but not limited to.
+
+I’m always open to collaborations and research discussions. Feel free to reach out!
