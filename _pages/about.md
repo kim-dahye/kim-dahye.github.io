@@ -14,7 +14,7 @@ profile:
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-misc: false # includes misc section
+misc: true # includes misc section
 misc_content: "Outside of research, I enjoy traveling, reading, and solving puzzles.  
 I also enjoy staying active with climbing, running, swimming, and ballet."
 social: true # includes social icons at the bottom of the page
