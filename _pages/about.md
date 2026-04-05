@@ -29,7 +29,7 @@ I am a second-year CS PhD student at Boston University, where I am fortunate to 
 💭 My current research interests include
 - Image and video synthesis
 - Multimodal models
-- Interpretability / Safety
+- Interpretability 
 
 but not limited to.
 
