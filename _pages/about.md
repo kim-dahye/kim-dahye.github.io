@@ -22,15 +22,10 @@ social: true # includes social icons at the bottom of the page
 
 Hi, thanks for stopping by! 👋
 
-I am a second-year CS PhD student at Boston University, where I am fortunate to be advised by [Prof. Deepti Ghadiyaram](https://deeptigp.github.io/). Prior to joining BU, I completed my Master’s degree at Yonsei University under the guidance of [Prof. Kwanghoon Sohn](https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en).
+I am a third-year CS PhD student at Boston University, where I am fortunate to be advised by [Prof. Deepti Ghadiyaram](https://deeptigp.github.io/). Prior to joining BU, I completed my Master’s degree at Yonsei University under the guidance of [Prof. Kwanghoon Sohn](https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en).
 
 <!-- My research interests broadly span computer vision and machine learning. I am particularly passionate about understanding black-box machine learning systems and developing robust, reliable models to address real-world challenges. -->
 
-💭 My current research interests include
-- Image and video synthesis
-- Multimodal models
-- Interpretability 
-
-but not limited to.
+I’m interested in understanding how generative models work and using those insights to make them more useful, efficient, and controllable.
 
 I’m always open to collaborations and research discussions. Feel free to reach out!
