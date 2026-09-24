@@ -6,5 +6,5 @@ related_posts: false
 visible: true
 ---
 <a href="https://kim-dahye.github.io/swift-sampling/" style="color: #1f9d6b; font-style: italic; text-decoration: none;">
-    Swift Sampling
-</a> is accepted at NeurIPS 2026! <img src="{{ '/assets/img/swift_sampling_logo.png' | relative_url }}" alt="Swift Sampling logo" style="height: 1.4em; width: auto; vertical-align: middle;">
+    Swift Sampling <img src="{{ '/assets/img/swift_sampling_logo.png' | relative_url }}" alt="Swift Sampling logo" style="height: 1.4em; width: auto; vertical-align: middle;">
+</a> is accepted at NeurIPS 2026! 
