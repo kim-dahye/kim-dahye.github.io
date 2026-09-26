@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <strong>Contact</strong>. dahye [at] bu [dot] edu
+subtitle: Ph.D. Student in Computer Science · Boston University
 
 profile:
   align: right
@@ -20,12 +20,8 @@ I also enjoy staying active with climbing, running, swimming, and ballet."
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, thanks for stopping by! 👋
+I am a third-year Ph.D. student in Computer Science at [Boston University](https://www.bu.edu/cs/), advised by [Prof. Deepti Ghadiyaram](https://deeptigp.github.io/).
 
-I am a third-year CS PhD student at Boston University, where I am fortunate to be advised by [Prof. Deepti Ghadiyaram](https://deeptigp.github.io/). Prior to joining BU, I completed my Master’s degree at Yonsei University under the guidance of [Prof. Kwanghoon Sohn](https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en).
+My research focuses on **understanding generative models and making them more efficient and controllable**, spanning image and video generation, multimodal LLMs, and interpretability.
 
-<!-- My research interests broadly span computer vision and machine learning. I am particularly passionate about understanding black-box machine learning systems and developing robust, reliable models to address real-world challenges. -->
-
-I’m interested in understanding how generative models work and using those insights to make them more useful, efficient, and controllable.
-
-I’m always open to collaborations and research discussions. Feel free to reach out!
+I am currently a Research Scientist Intern at **Adobe**, working with [Connelly Barnes](https://research.adobe.com/person/connelly-barnes/). Previously, I interned with Amazon’s GenAI team and earned my M.S. at Yonsei University, advised by [Prof. Kwanghoon Sohn](https://diml.yonsei.ac.kr/professor/).

@@ -1,0 +1,59 @@
+# Selected CV entries shown on the homepage. Full details remain in assets/pdf/CV.pdf.
+interests:
+  - Image & video generation
+  - Multimodal LLMs
+  - Model efficiency
+  - Interpretability
+
+experience:
+  - organization: Adobe
+    role: Research Scientist Intern
+    dates: Aug. 2026 – Present
+    detail: Diffusion models · Mentor Connelly Barnes
+  - organization: Boston University
+    role: Research Assistant
+    dates: Sep. 2024 – Present
+    detail: Generative models, multimodal learning, and interpretability
+  - organization: Amazon · GenAI Team
+    role: Applied Scientist Intern
+    dates: Jun. – Nov. 2025
+    detail: Efficient diffusion models · DDiT (CVPR 2026, Highlight)
+  - organization: Yonsei University · Digital Image Media Lab
+    role: Research Assistant
+    dates: Jan. 2021 – Jul. 2024
+    detail: Undergraduate research through Aug. 2022; graduate research from Sep. 2022
+
+education:
+  - school: Boston University
+    degree: Ph.D. in Computer Science
+    dates: 2024 – Present
+  - school: Yonsei University
+    degree: M.S. in Electrical and Electronic Engineering
+    dates: 2022 – 2024
+  - school: Yonsei University
+    degree: B.S. in Electrical and Electronic Engineering
+    dates: 2020 – 2022
+
+recognition:
+  - title: Hariri Institute Student Excellence Award
+    detail: Boston University · 2026
+  - title: Brain Korea 21 (BK21) Scholarship
+    detail: National Research Foundation of Korea · 2022–2024
+
+service:
+  - title: Workshop organization
+    detail: XAI4CV, CVPR 2025 & 2026
+    url: https://xai4cv-workshop.github.io/xai4cv2026/
+  - title: Reviewing
+    detail: CVPR, ECCV & NeurIPS 2026; AAAI 2027; IJCV; MIV & AI4CC workshops
+  - title: Student volunteering
+    detail: NEMI Workshop · Boston University · Aug. 2026
+    url: https://nemiconf.github.io/summer26/
+
+teaching:
+  - course: Applied Machine Learning
+    detail: CS 541 · Boston University · Spring 2025
+  - course: Introductory Digital Labs
+    detail: EEE 3313 · Yonsei University · Fall 2023
+  - course: Signals and Systems
+    detail: EEE 2060 · Yonsei University · Fall 2022

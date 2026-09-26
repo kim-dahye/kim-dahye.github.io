@@ -2,7 +2,7 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
+      {% unless site.enable_navbar_social and page.permalink == '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
@@ -20,10 +20,10 @@
             {{- site.title -}}
           {% endif %}
         </a>
-      {% elsif site.enable_navbar_social %}
+      {% else %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
-      {% endif %}
+      {% endunless %}
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
@@ -97,7 +97,13 @@
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {% if p.nav_url %}{% assign url = p.nav_url %} {% elsif p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
+                  {% if p.nav_url -%}
+                    {%- assign url = p.nav_url %}
+                  {% elsif p.permalink contains '/blog/' -%}
+                    {%- assign url = '/blog/' %}
+                  {% else -%}
+                    {%- assign url = p.url -%}
+                  {%- endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
                     {{- p.title }}
                     {% if page.url contains p.url %}
