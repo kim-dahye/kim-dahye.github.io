@@ -10,6 +10,37 @@ button:focus-visible,
   color: inherit;
 }
 
+.academic-home {
+  .home-section,
+  .home-cv-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--global-divider-color);
+
+    > h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .publications {
+    margin-top: 0;
+
+    ol.bibliography {
+      margin-bottom: 0;
+
+      > li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .home-cv-entries {
+    > li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .home-title-row {
   display: flex;
   align-items: center;
@@ -66,12 +97,10 @@ button:focus-visible,
 }
 
 .home-cv-section {
-  margin-top: 2rem;
-
   .home-cv-entries {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0;
+    margin: 0;
 
     li {
       margin-bottom: 1rem;
@@ -118,19 +147,22 @@ button:focus-visible,
 
 .publications {
   .publication-preview-media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin-inline: auto;
 
-    figure {
+    figure,
+    picture {
+      display: block;
+      width: 100%;
+      height: auto;
       margin: 0;
     }
 
     .preview {
-      width: auto;
+      display: block;
+      width: 100%;
       height: auto;
-      max-width: 100%;
-      max-height: 180px;
       object-fit: contain;
     }
   }
@@ -140,29 +172,15 @@ button:focus-visible,
   }
 
   @media (min-width: 576px) {
-    // Keep illustrations within the height of their corresponding paper text.
     .publication-entry > .abbr {
       margin-bottom: 0;
     }
-
-    .publication-preview-media {
-      position: absolute;
-      inset: 0 15px;
-
-      figure,
-      picture {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-      }
-
-      .preview {
-        max-height: 100%;
-      }
-    }
   }
+}
+
+// Medium Zoom moves the enlarged copy outside the publication container.
+.preview.medium-zoom-image--opened {
+  object-fit: contain;
 }
 
 // Keep the compact contact icons and relocated address without a new theme.

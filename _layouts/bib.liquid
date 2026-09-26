@@ -19,7 +19,12 @@
       {% if entry.preview %}
         <div class="publication-preview-media">
           {% if entry.preview contains '://' %}
-            <img class="preview z-depth-1 rounded" src="{{ entry.preview }}" alt="{{ entry.title | strip_html | escape }}" loading="lazy">
+            <img
+              class="preview z-depth-1 rounded"
+              src="{{ entry.preview }}"
+              alt="{{ entry.title | strip_html | escape }}"
+              loading="lazy"
+            >
           {% else %}
             {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
             {% assign preview_alt = entry.title | strip_html %}
@@ -27,7 +32,7 @@
               include figure.liquid
               loading="lazy"
               path=entry_path
-              sizes="(min-width: 930px) 280px, (min-width: 576px) 30vw, 90vw"
+              sizes="(min-width: 930px) 280px, (min-width: 576px) calc(33.333vw - 30px), 280px"
               class="preview z-depth-1 rounded"
               zoomable=true
               alt=preview_alt
