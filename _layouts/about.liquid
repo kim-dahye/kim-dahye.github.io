@@ -1,142 +1,86 @@
 ---
 layout: default
 ---
-<div class="academic-home">
-  <section class="profile-hero" aria-labelledby="profile-name">
-    <div class="profile-intro">
-      <p class="eyebrow">Computer vision &amp; machine learning</p>
-      <h1 id="profile-name">
-        {{ site.first_name }}
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      {% if site.title == 'blank' %}
+        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
-      </h1>
-      <p class="profile-subtitle">{{ page.subtitle }}</p>
-      <div class="profile-bio">{{ content }}</div>
-      <nav class="profile-links" aria-label="Contact and academic profiles">
-        <a class="profile-link-primary" href="{{ '/assets/pdf/CV.pdf' | relative_url }}">Curriculum vitae <span aria-hidden="true">↗</span></a>
-        <a href="mailto:{{ site.email }}">Email</a>
-        <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a>
-        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-        {% if site.linkedin_username -%}
-          <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">LinkedIn</a>
-        {%- endif %}
-      </nav>
-    </div>
-    {% if page.profile.image %}
-      <div class="profile-portrait">
-        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-        {% include figure.liquid loading="eager" path=profile_image_path alt="Dahye Kim" class="portrait-image" cache_bust=true %}
-        <p>
-          Boston University<br>
-          <span>Department of Computer Science</span>
-        </p>
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1
+      rounded' %}
+          {% endif %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+      30vw, 95vw"{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            cache_bust=true
+          %}
+        {% endif %}
+        {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
       </div>
     {% endif %}
-  </section>
 
-  <ul class="research-interests" aria-label="Research interests">
-    {% for interest in site.data.profile.interests %}
-      <li>{{ interest }}</li>
-    {% endfor %}
-  </ul>
+    <div class="clearfix">{{ content }}</div>
 
-  {% if page.news and site.announcements.enabled %}
-    <section class="home-section news-section" aria-labelledby="news-heading">
-      <div class="section-heading">
-        <h2 id="news-heading">News</h2>
-        <a href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a>
-      </div>
+    <!-- News -->
+    {% if page.news and site.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
       {% include news.liquid limit=true %}
-    </section>
-  {% endif %}
+    {% endif %}
 
-  {% if page.selected_papers %}
-    <section class="home-section" aria-labelledby="research-heading">
-      <div class="section-heading">
-        <h2 id="research-heading">Publications &amp; preprints</h2>
-        <a href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
-      </div>
+    <!-- Latest posts -->
+    {% if site.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">publications</a>
+      </h2>
       {% include selected_papers.liquid %}
-    </section>
-  {% endif %}
+    {% endif %}
 
-  <section class="home-section" aria-labelledby="experience-heading">
-    <div class="section-heading">
-      <h2 id="experience-heading">Research experience</h2>
-      <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">Full CV <span aria-hidden="true">↗</span></a>
-    </div>
-    <ol class="experience-list">
-      {% for entry in site.data.profile.experience %}
-        <li>
-          <p class="experience-dates">{{ entry.dates }}</p>
-          <div>
-            <h3>{{ entry.organization }}</h3>
-            <p class="experience-role">{{ entry.role }}</p>
-            <p class="experience-detail">{{ entry.detail }}</p>
-          </div>
-        </li>
-      {% endfor %}
-    </ol>
-  </section>
+    <!-- Misc -->
+    {% if page.misc %}
+      <h2>misc.</h2>
+      <p>{{ page.misc_content }}</p>
+    {% endif %}
 
-  <div class="academic-details">
-    <section aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      <ul class="detail-list">
-        {% for entry in site.data.profile.education %}
-          <li>
-            <h3>{{ entry.school }}</h3>
-            <p>{{ entry.degree }}</p>
-            <p class="detail-meta">{{ entry.dates }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-    <section aria-labelledby="service-heading">
-      <h2 id="service-heading">Professional service</h2>
-      <ul class="detail-list">
-        {% for entry in site.data.profile.service %}
-          <li>
-            <h3>{{ entry.title }}</h3>
-            <p>
-              {% if entry.url -%}
-                <a href="{{ entry.url }}">{{ entry.detail }}</a>
-              {%- else -%}
-                {{- entry.detail -}}
-              {%- endif %}
-            </p>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-    <section aria-labelledby="recognition-heading">
-      <h2 id="recognition-heading">Selected honors</h2>
-      <ul class="detail-list">
-        {% for entry in site.data.profile.recognition %}
-          <li>
-            <h3>{{ entry.title }}</h3>
-            <p>{{ entry.detail }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-    <section aria-labelledby="teaching-heading">
-      <h2 id="teaching-heading">Teaching</h2>
-      <ul class="detail-list">
-        {% for entry in site.data.profile.teaching %}
-          <li>
-            <h3>{{ entry.course }}</h3>
-            <p>{{ entry.detail }}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-  </div>
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
 
-  <div class="contact-closing">
-    <p>Always happy to connect about research and collaborations.</p>
-    <a href="mailto:{{ site.email }}">
-      {{- site.email }}
-      <span aria-hidden="true">↗</span></a
-    >
-  </div>
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter.enabled and site.footer_fixed %}
+      {% include scripts/newsletter.liquid center=true %}
+    {% endif %}
+  </article>
 </div>

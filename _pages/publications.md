@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
-description: Research in generative models, multimodal learning, efficiency, and interpretability.
+title: publications
+description: publications and preprints by categories in reversed chronological order. 
 nav: true
 nav_order: 2
 ---
