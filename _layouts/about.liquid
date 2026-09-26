@@ -1,81 +1,92 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
+<div class="post academic-home">
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+    <div class="home-hero">
+      <header class="post-header">
+        <div class="home-title-row">
+          <h1 class="post-title">
+            {% if site.title == 'blank' -%}
+              <span class="font-weight-bold">{{ site.first_name }}</span>
+              {{ site.middle_name }}
+              {{ site.last_name -}}
+            {%- else -%}
+              {{- site.title -}}
+            {%- endif %}
+          </h1>
+          <nav class="home-contact-links" aria-label="Contact and profiles">
+            {% if site.email -%}
+              <a href="mailto:{{ site.email | encode_email }}" aria-label="Email" title="Email"
+                ><i class="fa-solid fa-envelope" aria-hidden="true"></i
+              ></a>
+            {%- endif %}
+            {% if page.cv_pdf -%}
+              <a href="{{ page.cv_pdf | prepend: '/assets/pdf/' | relative_url }}" aria-label="CV" title="CV"
+                ><i class="fa-regular fa-file-lines" aria-hidden="true"></i
+              ></a>
+            {%- endif %}
+            {% if site.scholar_userid -%}
+              <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" aria-label="Google Scholar" title="Google Scholar"
+                ><i class="ai ai-google-scholar" aria-hidden="true"></i
+              ></a>
+            {%- endif %}
+            {% if site.github_username -%}
+              <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub" title="GitHub"
+                ><i class="fa-brands fa-github" aria-hidden="true"></i
+              ></a>
+            {%- endif %}
+          </nav>
+        </div>
+        <p class="home-affiliation">{{ page.subtitle }}</p>
+      </header>
+      <div class="home-introduction clearfix">
         {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <div class="profile home-profile float-right">
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% include figure.liquid loading="eager" path=profile_image_path class="img-fluid z-depth-1 rounded" sizes="(min-width: 930px) 270px, (min-width: 576px) 30vw, 95vw" alt="Dahye Kim" cache_bust=true %}
+          </div>
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+        <div class="home-bio">{{ content }}</div>
       </div>
-    {% endif %}
+    </div>
 
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="home-section" aria-labelledby="home-news">
+        <h2 id="home-news"><a href="{{ '/news/' | relative_url }}">News</a></h2>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
-    <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <section class="home-section" aria-labelledby="home-posts">
+        <h2 id="home-posts"><a href="{{ '/blog/' | relative_url }}">Latest Posts</a></h2>
+        {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
-    <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <section class="home-section" aria-labelledby="home-publications">
+        <h2 id="home-publications"><a href="{{ '/publications/' | relative_url }}">Publications</a></h2>
+        {% include selected_papers.liquid %}
+      </section>
     {% endif %}
 
-    <!-- Misc -->
+    {% include cv_sections.liquid %}
+
     {% if page.misc %}
-      <h2>misc.</h2>
-      <p>{{ page.misc_content }}</p>
+      <section class="home-section" aria-labelledby="home-misc">
+        <h2 id="home-misc">Outside Research</h2>
+        <p>{{ page.misc_content }}</p>
+      </section>
     {% endif %}
 
-    <!-- Social -->
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
+        {% if site.contact_note != blank %}
+          <div class="contact-note">{{ site.contact_note }}</div>
+        {% endif %}
       </div>
     {% endif %}
 

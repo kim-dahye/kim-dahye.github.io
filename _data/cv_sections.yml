@@ -1,0 +1,46 @@
+- id: research-experience
+  title: Research Experience
+  entries:
+    - title: Adobe Inc.
+      subtitle: Research Intern
+      dates: Aug. 2026 – Present
+      location: Seattle, WA, USA
+      logo: "/assets/img/company/adobe.svg"
+    - title: Amazon.com, Inc.
+      subtitle: Applied Scientist Intern
+      dates: Jun. 2025 – Nov. 2025
+      location: Seattle, WA, USA
+      logo: "/assets/img/company/amazon.png"
+- id: awards-and-honors
+  title: Awards and Honors
+  entries:
+    - title: Hariri Institute Student Excellence Award
+      subtitle: Boston University
+      dates: "2026"
+      description: "*Awarded for significant contributions within the Hariri Institute and a commitment to excellence.*"
+- id: professional-service
+  title: Professional Service
+  entries:
+    - title: Workshop Organizer
+      subtitle: "XAI4CV: Explainable Artificial Intelligence for Computer Vision"
+      date_links:
+        - label: CVPR 2025
+          url: https://openaccess.thecvf.com/CVPR2025_workshops/XAI4CV
+        - label: CVPR 2026
+          url: https://xai4cv-workshop.github.io/xai4cv2026/
+    - title: Reviewer
+      details:
+        - label: Conferences
+          text: CVPR (2026), ECCV (2026), NeurIPS (2026), AAAI (2027).
+        - label: Journals
+          text: IJCV.
+- id: teaching
+  title: Teaching
+  entries:
+    - title: "CS 541: Applied Machine Learning"
+      url: https://docs.google.com/document/u/2/d/e/2PACX-1vQ-JiPOb-4qfGpleLgKZ3EuX17gwojbG_vs7Fz66w5UskvLsmR6Q0y1PkLfEVGIBbUNxpOAl9up5I8n/pub
+      dates: Spring 2025
+    - title: "EEE 3313: Introductory Digital Labs"
+      dates: Fall 2023
+    - title: "EEE 2060: Signals and Systems"
+      dates: Fall 2022

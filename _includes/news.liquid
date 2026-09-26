@@ -1,34 +1,48 @@
 <div class="news">
-  {% if site.news != blank %}
-    {% assign news_size = site.news | size %}
+  {% assign news = site.news | where_exp: 'item', 'item.visible != false' | sort: 'date' | reverse %}
+  {% assign news_size = news | size %}
+  {% assign visible_count = site.announcements.visible_count | default: 5 %}
+  {% assign scroll_news = false %}
+  {% if include.limit and site.announcements.scrollable and news_size > visible_count %}
+    {% assign scroll_news = true %}
+  {% endif %}
+  {% if news_size > 0 %}
     <div
       class="table-responsive"
-      {% if include.limit and site.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
+      {% if scroll_news %}
+        data-news-visible="{{ visible_count }}"
+        style="max-height: 14rem; overflow-y: auto"
+        tabindex="0"
+        role="region"
+        aria-label="Latest news. Scroll for older announcements."
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% assign news = site.news | where_exp: "item", "item.visible != false" | reverse %}
-        {% assign news_size = news | size %}
-        {% if include.limit and site.announcements.limit %}
+        {% assign news_limit = news_size %}
+        {% if include.limit and site.announcements.limit and site.announcements.scrollable != true %}
           {% assign news_limit = site.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
         {% endif %}
-        {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
+        <tbody>
+          {% for item in news limit: news_limit %}
+            <tr>
+              <th scope="row">
+                <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %d, %Y' }}</time>
+              </th>
+              <td>
+                {% if item.inline %}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% else %}
+                  <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
       </table>
     </div>
+    {% if scroll_news %}
+      <script defer src="{{ '/assets/js/news.js' | relative_url | bust_file_cache }}"></script>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}

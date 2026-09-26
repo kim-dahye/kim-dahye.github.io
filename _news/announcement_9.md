@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 Excited to join
-<span style="color: #EB1000; font-style: italic;">
+<span style="font-style: italic;">
 Adobe
 </span>
-as a Research Scientist Intern in Seattle! 🎨
+as a Research Intern in Seattle! 🎨

@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 I joined
-<span style="color: #ff9900; font-style: italic;">
+<span style="font-style: italic;">
 Amazon
 </span>
-as an Applied Scientist Intern in Seattle! 🏙️
+as a Research Intern in Seattle! 🏙️

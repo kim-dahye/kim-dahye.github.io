@@ -6,6 +6,6 @@ related_posts: false
 ---
 
 New preprint is out: check out 
-<a href="https://steerers.github.io/" style="color: #2698ba; font-style: italic; text-decoration: none;">
+<a href="https://steerers.github.io/" style="font-style: italic;">
     Concept Steerers
-</a>🪄 
+</a>🪄

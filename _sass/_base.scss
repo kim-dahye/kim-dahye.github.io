@@ -654,6 +654,12 @@ footer.sticky-bottom {
   }
 }
 
+.news strong,
+.publications .periodical strong,
+.home-cv-description strong {
+  font-weight: 700;
+}
+
 // Publications
 
 .publications {

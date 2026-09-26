@@ -1,0 +1,208 @@
+// Homepage additions inherit al-folio's original fonts, colors, and spacing.
+a:focus-visible,
+button:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 4px;
+}
+
+.academic-home h2 a {
+  color: inherit;
+}
+
+.home-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.375rem 1.5rem;
+  margin-bottom: 0.5rem;
+
+  .post-title {
+    margin-bottom: 0;
+  }
+}
+
+.home-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  font-size: 20px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 32px;
+    line-height: 1;
+  }
+}
+
+.home-link-neutral,
+.news table.table a,
+#professional-service + .home-cv-entries .home-cv-date a,
+#teaching + .home-cv-entries a {
+  color: var(--global-text-color);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--global-text-color);
+    text-decoration: underline;
+  }
+}
+
+.news {
+  .table {
+    color: var(--global-text-color);
+  }
+
+  .table th {
+    width: 20%;
+  }
+
+  td {
+    overflow-wrap: break-word;
+  }
+}
+
+.home-cv-section {
+  margin-top: 2rem;
+
+  .home-cv-entries {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .home-cv-entry-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .home-cv-entry-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .home-cv-entry-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .home-cv-company-logo {
+    width: 80px;
+    height: 56px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: #fff;
+    padding: 6px;
+    border-radius: 3px;
+  }
+
+  .home-cv-date {
+    font-size: 0.9rem;
+  }
+
+  .home-cv-description p {
+    margin-bottom: 0;
+  }
+}
+
+.publications {
+  .publication-preview-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    figure {
+      margin: 0;
+    }
+
+    .preview {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+    }
+  }
+
+  .author-self {
+    font-weight: 700;
+  }
+
+  @media (min-width: 576px) {
+    // Keep illustrations within the height of their corresponding paper text.
+    .publication-entry > .abbr {
+      margin-bottom: 0;
+    }
+
+    .publication-preview-media {
+      position: absolute;
+      inset: 0 15px;
+
+      figure,
+      picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .preview {
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+// Keep the compact contact icons and relocated address without a new theme.
+.academic-home .social {
+  .contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 20px;
+  }
+}
+
+footer .home-mailing-address {
+  display: inline;
+  margin: 0;
+  font-style: normal;
+
+  &::after {
+    content: " · ";
+  }
+}
+
+@media (max-width: 575px) {
+  .home-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile.float-right {
+    float: none !important;
+    margin-left: 0;
+  }
+
+  .news .table th {
+    width: 112px;
+    white-space: nowrap;
+  }
+
+  .home-cv-entry-heading {
+    flex-direction: column;
+  }
+}

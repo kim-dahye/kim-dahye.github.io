@@ -5,6 +5,6 @@ inline: true
 related_posts: false
 visible: true
 ---
-<a href="https://ddit-fast.github.io/ddit/" style="color: #2698ba; font-style: italic; text-decoration: none;">
+<a href="https://ddit-fast.github.io/ddit/" style="font-style: italic;">
     DDiT
 </a> is accepted at CVPR 2026! 🏞️

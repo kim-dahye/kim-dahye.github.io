@@ -1,0 +1,60 @@
+{% for section in site.data.cv_sections %}
+  <section class="home-cv-section" aria-labelledby="{{ section.id }}">
+    <h2 id="{{ section.id }}">{{ section.title }}</h2>
+    <ul class="home-cv-entries">
+      {% for entry in section.entries %}
+        <li
+          {% if entry.logo %}
+            class="home-cv-entry-with-logo"
+          {% endif %}
+        >
+          {% if entry.logo %}
+            <img
+              class="home-cv-company-logo"
+              src="{{ entry.logo | relative_url }}"
+              alt="{{ entry.title }} logo"
+              width="80"
+              height="56"
+              loading="lazy"
+            >
+          {% endif %}
+          <div class="home-cv-entry-content">
+            <div class="home-cv-entry-heading">
+              <strong>
+                {%- if entry.url -%}
+                  <a href="{{ entry.url }}">{{ entry.title }}</a>
+                {%- else -%}
+                  {{- entry.title -}}
+                {%- endif -%}
+              </strong>
+              {% if entry.date_links -%}
+                <span class="home-cv-date">
+                  {%- for date_link in entry.date_links -%}
+                    {% unless forloop.first %}, {% endunless -%}
+                    <a href="{{ date_link.url }}">{{ date_link.label }}</a>
+                  {%- endfor -%}
+                </span>
+              {% elsif entry.dates -%}
+                <span class="home-cv-date">{{ entry.dates }}</span>
+              {%- endif %}
+            </div>
+            {% if entry.subtitle %}
+              <div class="home-cv-subtitle">{{ entry.subtitle }}</div>
+            {% endif %}
+            {% if entry.location %}
+              <div class="home-cv-location">{{ entry.location }}</div>
+            {% endif %}
+            {% if entry.description %}
+              <div class="home-cv-description">{{ entry.description | markdownify }}</div>
+            {% endif %}
+            {% for detail in entry.details %}
+              <div class="home-cv-detail">
+                <span class="home-cv-detail-label">{{ detail.label }}:</span> {{ detail.text }}
+              </div>
+            {% endfor %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}

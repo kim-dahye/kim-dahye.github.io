@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Dahye
-middle_name: 
+middle_name:
 last_name: Kim
 email: dahye@bu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -97,7 +97,7 @@ pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
 quora_username: # your Quora username
 research_gate_profile: # your profile on ResearchGate
-scholar_userid: psS9UC4AAAAJ&hl # your Google Scholar ID
+scholar_userid: psS9UC4AAAAJ # your Google Scholar ID
 scopus_id: # your profile on Scopus
 semanticscholar_id: # your Semantic Scholar ID
 spotify_id: # your spotify id
@@ -196,7 +196,8 @@ collections:
 
 announcements:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: true # scroll older announcements on the home page
+  visible_count: 5 # number of announcements visible before scrolling
   limit: # leave blank to include all the news in the `_news` folder
 
 latest_posts:

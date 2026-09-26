@@ -1,6 +1,9 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
+      {% if page.mailing_address %}
+        <address class="home-mailing-address">{{ page.mailing_address }}</address>
+      {% endif %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}
@@ -20,6 +23,9 @@
     {% endif %}
 
     <div class="container">
+      {% if page.mailing_address %}
+        <address class="home-mailing-address">{{ page.mailing_address }}</address>
+      {% endif %}
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
       {{ site.middle_name }}
