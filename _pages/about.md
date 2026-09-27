@@ -18,8 +18,10 @@ I also enjoy staying active with climbing, running, swimming, and ballet."
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a third-year Ph.D. student in Computer Science at [Boston University](https://www.bu.edu/cs/), advised by [Deepti Ghadiyaram](https://deeptigp.github.io/).
+Hi, thanks for stopping by! 👋
 
-My research focuses on image and video generation and multimodal large language models, with an emphasis on efficiency and interpretability. I study how these models work and use that understanding to make them more efficient and controllable.
+I am a third-year CS PhD student at Boston University, where I am fortunate to be advised by [Prof. Deepti Ghadiyaram](https://deeptigp.github.io/). Prior to joining BU, I completed my Master’s degree at Yonsei University under the guidance of [Prof. Kwanghoon Sohn](https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en).
 
-I am currently a research intern at [Adobe](https://www.adobe.com/) and previously interned at [Amazon](https://www.amazon.com/). Before joining <a class="home-link-neutral" href="https://www.bu.edu/cs/">Boston University</a>, I received my master’s degree from [Yonsei University](https://ee.yonsei.ac.kr/ee_en/index.do) under the supervision of [Kwanghoon Sohn](https://scholar.google.com/citations?user=zEtk0QsAAAAJ&hl=en).
+I’m interested in understanding how generative models work and using those insights to make them more useful, efficient, and controllable.
+
+I’m always open to collaborations and research discussions. Feel free to reach out!
