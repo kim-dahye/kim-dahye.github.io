@@ -75,10 +75,11 @@ layout: default
     {% include cv_sections.liquid %}
 
     {% if page.misc %}
-      <section class="home-section" aria-labelledby="home-misc">
-        <h2 id="home-misc">Outside Research</h2>
-        <p>{{ page.misc_content }}</p>
+      <section class="home-section home-misc-section" aria-labelledby="home-misc">
+        <h2 id="home-misc">Miscellaneous</h2>
+        {{ page.misc_content | markdownify }}
       </section>
+      <script defer src="{{ '/assets/js/pronunciation.js' | relative_url | bust_file_cache }}"></script>
     {% endif %}
 
     {% if page.social %}

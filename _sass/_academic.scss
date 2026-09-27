@@ -10,6 +10,54 @@ button:focus-visible,
   color: inherit;
 }
 
+.home-misc-section strong {
+  font-weight: 700;
+}
+
+.pronunciation-control {
+  white-space: nowrap;
+}
+
+.pronunciation-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  min-height: 24px;
+  padding: 0 0.125rem;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: #1e3a5f;
+  font: inherit;
+  font-weight: 500;
+  vertical-align: baseline;
+  cursor: pointer;
+
+  i {
+    font-size: 0.8em;
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &:focus-visible {
+    outline-color: currentColor;
+  }
+}
+
+html[data-theme="dark"] .pronunciation-button {
+  color: #a9c4e8;
+}
+
+.pronunciation-status {
+  display: block;
+  color: var(--global-text-color);
+  font-size: 0.875rem;
+}
+
 .academic-home {
   .home-section,
   .home-cv-section {

@@ -12,9 +12,12 @@ profile:
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-misc: false # includes misc section
-misc_content: "Outside of research, I enjoy traveling, reading, and solving puzzles.  
-I also enjoy staying active with climbing, running, swimming, and ballet."
+misc: true # includes misc section
+misc_content: |
+  My Korean name is 김다혜 (金茶慧). Dahye means “beautiful and wise.” It’s pronounced “dah-heh” <span class="pronunciation-control">(<button type="button" class="pronunciation-button" data-pronunciation aria-label="Listen to the Korean pronunciation of 다혜" aria-describedby="pronunciation-status"><i class="fa-solid fa-volume-high" aria-hidden="true"></i>Listen</button>).</span>
+  <span id="pronunciation-status" class="pronunciation-status" role="status" aria-live="polite" aria-atomic="true"></span>
+
+  **Languages:** Korean (native), English (fluent).
 social: true # includes social icons at the bottom of the page
 ---
 
