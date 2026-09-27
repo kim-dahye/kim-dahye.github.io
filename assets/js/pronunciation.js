@@ -22,7 +22,7 @@
       const voices = synthesis.getVoices();
       const language = (voice) => voice.lang.toLowerCase().replaceAll("_", "-");
       koreanVoice = voices.find((voice) => language(voice) === "ko-kr") || voices.find((voice) => /^ko(?:-|$)/.test(language(voice))) || null;
-    } catch {
+    } catch (error) {
       koreanVoice = null;
     }
   };
@@ -77,7 +77,7 @@
         unavailable();
       }, 8000);
       synthesis.speak(utterance);
-    } catch {
+    } catch (error) {
       stopPlayback();
       unavailable();
     }
